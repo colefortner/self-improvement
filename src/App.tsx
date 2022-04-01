@@ -1,12 +1,12 @@
-import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import Weight from "./weight/Weight";
+import Steps from "./fitness/steps/Steps";
 
 function App() {
   return (
     <div className="App">
       <Weight />
+      <Steps />
     </div>
   );
 }
