@@ -41,12 +41,16 @@ const Weight: React.FC = () => {
   return (
     <div style={{ border: "1px solid black", display: "inline-block" }}>
       <h1>Weight Progress</h1>
-      <Graph
-        xaxis={days!}
-        yaxis={weights!}
-        markerColor={"blue"}
-        title={"Weights"}
-      />
+      {weights && days ? (
+        <Graph
+          xaxis={days}
+          yaxis={weights}
+          markerColor={"blue"}
+          title={"Weights"}
+        />
+      ) : (
+        <h1>No Data Available</h1>
+      )}
       <DailyWeightForm />
     </div>
   );
